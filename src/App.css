@@ -1,0 +1,31 @@
+.app {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.app__header {
+  flex-shrink: 0;
+  padding: clamp(12px, 3vmin, 24px) clamp(16px, 4vw, 24px) clamp(4px, 1vmin, 8px);
+  text-align: center;
+}
+
+.app__title {
+  margin: 0;
+  font-size: clamp(22px, 4.5vw, 36px);
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+}
+
+.app__subtitle {
+  margin: 0 auto;
+  max-width: 36em;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--text);
+}
