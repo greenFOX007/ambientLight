@@ -1,10 +1,8 @@
 import { useEffect, useRef } from 'react'
 import './VideoAmbient.css'
 
-/** Из public/ — отдаётся с поддержкой Range, без упаковки в бандл. */
 const VIDEO_SRC = `${import.meta.env.BASE_URL}ambient.webm`
 
-/** Размытие в координатах битмапа канваса (как у CSS blur для того же размера). */
 const CANVAS_BLUR_FILTER = 'blur(300px)'
 const CANVAS_SCALE_FILTER = 1.12
 
@@ -55,7 +53,6 @@ const VideoAmbient = () => {
     videoEl.addEventListener('play', onPlay)
     videoEl.addEventListener('pause', onPause)
 
-    // Уже в кэше: метаданные могут быть до срабатывания loadedmetadata
     if (videoEl.readyState >= 1) {
       syncCanvasSize()
     }
